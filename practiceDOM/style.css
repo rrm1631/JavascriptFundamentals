@@ -1,0 +1,29 @@
+.error{
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+}
+
+.success{
+    padding: 10px;
+    color: limegreen;
+    border: 1px dotted limegreen;
+}
+
+li{
+    list-style-type: none;
+    max-width: 200px;
+    padding: 8px;
+    margin: 8px 0;
+    background: #eee;
+    border: 1px dotted #ddd;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin: 10px 0;
+    background: #eee;
+    text-align: center;
+    padding: 20px;
+}

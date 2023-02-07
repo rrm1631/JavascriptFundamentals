@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Todos</h1>
+    
+    <ul>
+        <li>buy milk</li>
+        <li>read books</li>
+        <li>play guitar</li>
+        <li>pay bills</li>
+    </ul>
+
+    <button> Click </button>
+    
+    <script>
+        const button = document.querySelector('button');
+        const items = document.querySelectorAll('li');
+        const ul = document.querySelector('ul');
+
+        // Adde new todo
+        button.addEventListener('click', ()=>{
+            //ul.innerHTML += `<li> new todo </li>`; //typical way to append new elements
+
+            //Alternative way to add elements
+            const addList = document.createElement('li');
+            addList.textContent = 'something new';
+            ul.append(addList);//append an element to the parent
+            // ul.prepend(addList);//add element at the top inside of parent
+        });
+
+
+        // EVENT BUBBLING
+
+        // items.forEach(item => {
+        //     item.addEventListener('click', (e)=>{
+        //         console.log(e.target); // gets the element on which the event originally occurred
+        //         e.stopPropagation(); //prevents event from bubbling up to the parent
+        //         item.remove(); //removes an element (or node) from the document.
+
+        //     });
+        // });
+
+        // //having an event with a child and a parent may cause Event Bubbling
+        // ul.addEventListener('click', e => {
+        //     console.log('event in ul');
+        // });
+
+        // EVENT BUBBLING END
+
+
+
+        // EVENT DELEGATION
+        ul.addEventListener('click', e => {
+            //check if you click on an li tag
+            if(e.target.tagName === 'LI'){
+                e.target.remove();
+            }
+            // console.log(e); //check event properties
+        });
+
+    </script>
+</body>
+</html>

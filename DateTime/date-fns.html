@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="clock"></div>
+
+    <!-- Date-FNS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.9.0/date_fns.min.js" integrity="sha512-ToehgZGJmTS39fU8sfP9/f0h2Zo6OeXXKgpdEgzqUtPfE5By1K/ZkD8Jtp5PlfdaWfGVx+Jw5j10h63wSwM1HA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        const now = new Date();
+
+        //how to use Date FNS - dateFns.methods(var);
+        const today = dateFns.isToday(now);
+        console.log(today);
+
+
+        //Formating Options - check https://date-fns.org/v2.29.3/docs/format for reference
+        console.log(dateFns.format(now, 'YYYY'));
+        console.log(dateFns.format(now, 'MMMM'));
+        console.log(dateFns.format(now, 'dddd'));
+        console.log(dateFns.format(now, 'Do'));
+        console.log(dateFns.format(now, 'dddd, Do, MMMM, YYYY')); //output: Tuesday, 6th, December, 2022
+
+
+        //Comparing Dates
+        const before = new Date('December 1 2022 7:30:59');
+
+        console.log(dateFns.distanceInWords(now, before));
+
+    </script>
+</body>
+</html>

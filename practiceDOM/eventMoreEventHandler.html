@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="copy-me">
+        Copy this, and find out what happens...
+    </p>
+
+    <div class="box">
+        Hover Around this Box
+    </div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    
+
+  
+    
+    <script>
+     const copy = document.querySelector('.copy-me');
+     const box = document.querySelector('.box');
+
+     copy.addEventListener('copy', ()=>{ //runs when you copy the something inside the element
+        console.log('copied');
+     });
+
+     box.addEventListener('mousemove', (e)=>{ //runs when mousemove inside the box
+        // box.style.background = 'red';
+        //console.log(e.offsetX, e.offsetY)//log the x and y coordinates
+        box.textContent = `x pos(${e.offsetX}),  y pos(${e.offsetY})`;
+     })
+
+     document.addEventListener('wheel', e =>{ //runs when you scroll using mouse scroll
+        console.log(e.pageX, e.pageY);
+     });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The DOM</h1>
+
+    <a href="www.google.com">Link to somewhere cool..</a>
+
+    <p class="error"> lorem ipsum</p>
+
+    <script>
+        const link = document.querySelector('a');
+        console.log(link.getAttribute('href')); //gets the attribute of the element
+        link.setAttribute('href', 'www.youtube.com'); //changes the attribute of the element selected
+        link.innerText ='Go to Youtube Website';
+
+        const msg = document.querySelector('p');
+        console.log(msg.getAttribute('class'));
+        msg.setAttribute('class', 'success');
+        msg.setAttribute('style', 'color:green;'); //will create a new attribute if doesn't exist
+        
+    </script>
+</body>
+</html>

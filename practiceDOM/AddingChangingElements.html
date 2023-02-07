@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="page-title">Document Object Model</h1>
+
+    <div>
+        <p>Hello, World</p>
+        <p>lorem ipsum</p>
+        <p class="error"> this is an error message </p>
+    </div>
+
+    <div class="content">
+        <p>This is a content</p>
+    </div>
+
+    <script>
+
+        const para = document.querySelector('p');
+        //para.innerText = "Hello, Raph"; //this help change the text of the element
+        //console.log(para.innerText);
+
+        const paras = document.querySelectorAll('p'); //get all p tags
+        // paras.forEach((para)=>{
+        //     para.innerText += ' new text';
+        //     console.log(para.innerText); 
+        // })
+
+        const content = document.querySelector('.content');
+        //console.log(content.innerHTML); //Get the HTML content of an element
+        //content.innerHTML = '<h2> THIS IS A NEW H2 </h2>'; //overides the content element
+        //content.innerHTML += '<h2> THIS IS A NEW H2 </h2>'; //appends a new element w/ its values inside the content element
+        
+        const people = ['mario', 'luigi', 'yoshi'];
+
+        people.forEach((person)=>{
+            content.innerHTML += `<p> ${person}</p>`;
+        });
+
+
+    </script>
+</body>
+</html>

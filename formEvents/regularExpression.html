@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: #eee;
+        }
+
+        form{
+            max-width: 200px;
+            margin: 40px auto;
+            background: white;
+            padding: 10px;
+        }
+        
+        input{
+            display: block;
+            margin: 10px auto;
+            padding: 4px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <form action="" class="signup-form">
+        <input type="text" id="username" placeholder="username">
+        <input type="submit" value="submit">
+    </form>
+    
+    <script>
+        const form = document.querySelector('.signup-form');
+        // const username = document.querySelector('#username');
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+
+            // console.log(username.value);
+
+            //Alternate way to fetch value from form input, using dot notation 
+            console.log(form.username.value); //form-element.inputID.value
+            
+        });
+
+        //Testing Regex
+        const username = 'raphael';
+        const pattern = /^[a-z]{6,}$/ //accept lowercase character from a-z, atleast 6 character long
+        console.log(pattern.test(username));
+
+        let result = pattern.test(username);
+
+        if(result){
+            console.log("Its good to go");
+        }
+        else{
+            console.log("follow the pattern");
+        }
+        
+
+        //Alternate way to check regex, using search()
+        // let result = username.search(pattern);
+        // console.log(result);
+
+    </script>
+</body>
+</html>

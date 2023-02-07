@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Times</title>
+
+    <style>
+        body{
+            background: #333;
+        }
+
+        .clock{
+            font-size: 4em;
+            text-align: center;
+            margin: 200px;
+            color: yellow;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .clock span{
+            padding: 20px;
+            background: #444;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+
+    <div class="clock"></div>
+
+    <script>
+        const clock = document.querySelector('.clock');
+
+        const tick = ()=>{
+            const now = new Date();
+
+            const hrs = now.getHours();
+            const mins = now.getMinutes();
+            const secs = now.getSeconds();
+
+            const html = `
+                <span> ${hrs} </span> :
+                <span> ${mins} </span> :
+                <span> ${secs} </span>
+            `;
+
+            clock.innerHTML = html;
+        };
+
+        setInterval(tick, 1000);
+    </script>
+</body>
+</html>

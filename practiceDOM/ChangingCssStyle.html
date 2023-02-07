@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: orange;">The DOM</h1>
+
+    <script>
+        const title = document.querySelector('h1');
+        //console.log(title.style); //logs all style properties available to the element
+        //title.setAttribute('style', 'margin:50px;'); //using setAttribute will not simply add the style but override it
+        title.style.color = 'red'; //updates the color
+        title.style.margin = '50px'; //adds margin
+        title.style.fontSize = '60px'; 
+        //title.style.margin = ''; //removes property
+    </script>
+</body>
+</html>

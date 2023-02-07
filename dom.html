@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="page-title">Document Object Model</h1>
+
+    <div>
+        <p>Hello, World</p>
+        <p>lorem ipsum</p>
+        <p class="error"> this is an error message </p>
+    </div>
+
+    <div class="error">this is another error</div>
+
+    <script>
+
+        //Get Element using ID
+        const title = document.getElementById('page-title');
+
+        //Get Element using class name
+        const errors = document.getElementsByClassName(error); //returns an htmlcollection/array
+
+        //Get Element using tag name
+        const paragraphs = document.getElementsByTagName('p'); //returns an htmlcollection/array
+
+        
+        //Using querySelector - Returns the first element that is a descendant of node that matches selectors.
+        const para = document.querySelector('p'); //grabs the first p tag
+        const paraErr = document.querySelector('.error'); //grabs the first p tag
+        const divErr = document.querySelector('div.error'); //grabs the first p tag
+        console.log();
+
+        //Using querySelectorAll - returns all elements that matches a CSS selector
+        const paraAll = document.querySelectorAll('p'); //this returns a nodelist
+        // console.log(paraAll[1]); //using sqrbracket notation, it allows you to select the elements you want
+        // paraAll.forEach((eachPara)=>{ //you can user forEach to iterate each element, doues not work in getElementsByClassName
+        //     console.log(eachPara);
+        // });
+
+        console.log(paraAll);
+    </script>
+</body>
+</html>

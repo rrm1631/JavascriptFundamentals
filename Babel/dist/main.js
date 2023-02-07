@@ -1,0 +1,1 @@
+(()=>{const o=o=>{console.log(`Hello, ${o}`)};o("Mario"),o("Luigi"),o("Yoshi"),o("Link"),o("Zelda");const s=new class{constructor(){this.score=93}};console.log(s.score)})();

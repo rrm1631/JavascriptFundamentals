@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="page-title">Document Object Model</h1>
+
+    <article>
+        <h2>article title</h2>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <p>lorem ipsum</p>
+        <div>written by Author</div>
+    </article>
+    
+    <script>
+        const article = document.querySelector('article');
+        // console.log(article.children); //returns the children elements of the paren as an html collection
+        // Array.from(article.children); //returns as an array
+
+        //Fetch all children element from parent
+        Array.from(article.children).forEach((child)=>{
+            child.classList.add('article-element'); //add class to each child element
+        });
+
+
+        //Get Parent/Sibling Element
+        const title = document.querySelector('h2');
+        console.log(title.parentElement); //returns the parent element of the children
+        console.log(title.nextElementSibling); //returns the next sibling element 
+        console.log(title.previousElementSibling); //returns the previous sibling element 
+
+
+
+
+
+    </script>
+</body>
+</html>
